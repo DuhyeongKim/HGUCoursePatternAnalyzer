@@ -55,7 +55,14 @@ public class HGUCoursePatternAnalyzer {
 	 */
 	private Student[] initiateStudentArrayFromLines(String[] lines) {
 		
-		// TODO: implement this method
+		// TODO: implement this metho
+		for(int i = 0; i < lines.length; i++){
+			
+			String a = Student(lines[i]).split(",");
+			students[i] = a.trim()[1]'
+			
+		}
+		
 		
 		
 		return null;
