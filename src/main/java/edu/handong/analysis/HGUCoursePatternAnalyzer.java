@@ -59,7 +59,7 @@ public class HGUCoursePatternAnalyzer {
 		for(int i = 0; i < lines.length; i++){
 			
 			String a = Student(lines[i]).split(",");
-			students[i] = a.trim()[1]'
+			students[i] = a.trim()[1];
 			
 		}
 		
@@ -91,6 +91,12 @@ public class HGUCoursePatternAnalyzer {
 	private Course[] initiateCourseArrayFromLines(String[] lines) {
 		
 		// TODO: implement this method
+		for(int i = 0; i < lines.length; i++){
+			
+			String b = Course(lines[i]).split(",");
+			courses[i] = b.trim()[1];
+			
+		}
 		
 		return null;
 	}
