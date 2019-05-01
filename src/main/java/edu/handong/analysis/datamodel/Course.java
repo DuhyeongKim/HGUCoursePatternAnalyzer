@@ -8,9 +8,12 @@ public class Course {
 		
 	}
 	public String getCourseName() {
+		
 		return courseName;
+			
+		}
+		
 	}
 
 
 
-}
