@@ -92,14 +92,14 @@ public class HGUCoursePatternAnalyzer {
 	 */
 	private ArrayList<Course> initiateCourseArrayFromLines(String[] lines) {
 		
-		Course[] courses = new Course[numOfCourses];
+		ArrayList<Course> courses = new ArrayList<Course>();
 		
-		int count = 0;
+		
 		for(String line:lines) {
 			String courseName = line.split(",")[2].trim();
 			Course newCourse = new Course(courseName);
 			if(!courseExist(courses,newCourse))
-				courses[count++] = newCourse;
+				courses.add(newCourse);
 		}
 		
 		return courses;
@@ -111,7 +111,7 @@ public class HGUCoursePatternAnalyzer {
 	 * @param course
 	 * @return boolean
 	 */
-	private boolean courseExist(Course[] courses, Course course) {
+	private boolean courseExist(ArrayList<Course> courses, Course course) {
 		
 		for(Course aCourse:courses) {
 			if(aCourse != null && aCourse.getCourseName().equals(course.getCourseName()))
